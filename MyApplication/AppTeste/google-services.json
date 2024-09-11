@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "624476032584",
+    "project_id": "ibec-a29cc",
+    "storage_bucket": "ibec-a29cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:624476032584:android:153ded8da407404079d27d",
+        "android_client_info": {
+          "package_name": "br.com.myapplication.android"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsbDEIJJiORdj3U3sjG8R462TmQxblAS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

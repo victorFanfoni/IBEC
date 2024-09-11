@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#C9CACA"
+    >
+
+    <View
+        android:id="@+id/Logo"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@drawable/logo_ibec_menor"
+        android:layout_margin="20dp"
+        />
+
+    <TextView
+        android:id="@+id/Oracao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Oracao do dia: slkdnfskndonsdnskdnflksndfkjsndkfjnksdnjfksjdfksnjdfnjjs\ndknjs\kdfnjkç\jfdsnfkskdfnjksdjnfk\snjdfçkjnsdfkjnsd\kfjn\sdgnjbjn\svnskFJNKJFNKJNSFKAJSBKJANSFKn."
+        android:textColor="@color/black"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        />
+
+    <Button
+        android:id="@+id/btComecar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Começar"
+        android:layout_marginTop="210dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/bg_btn"
+        />
+
+
+
+</LinearLayout>
