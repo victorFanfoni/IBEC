@@ -3,15 +3,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#C9CACA"
+    android:background="@color/white"
     >
 
-    <View
+    <ImageView
         android:id="@+id/Logo"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:background="@drawable/logo_ibec_menor"
-        android:layout_margin="20dp"
+        android:background="@drawable/logo_ibec_vertical"
         />
 
     <TextView

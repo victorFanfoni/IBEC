@@ -1,294 +1,184 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:orientation="vertical">
+    android:background="@color/white">
 
-    <RelativeLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="#919090"
+        android:padding="8dp">
 
-        <Toolbar
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/www"
-            />
+            android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="56dp"
-            android:layout_height="43dp"
-            android:layout_marginStart="2dp"
-            android:layout_marginTop="5dp"
-            android:src="@drawable/ic_manu" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="187dp"
-            android:layout_marginTop="14dp"
-            android:text="IBEC"
-            android:textStyle="bold"
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-        <SearchView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="266dp"
-            android:layout_marginTop="3dp"
-            android:layout_toEndOf="@+id/imageView" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="56dp"
-            android:layout_height="43dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="4dp"
-            android:layout_marginEnd="235dp"
-            app:srcCompat="@drawable/logo_ibec" />
-
-    </RelativeLayout>
-
-
-
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:layout_margin="16dp" />
-
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginEnd="10dp">
-
-        <!-- Primeira linha de botões (Home, Eventos, Calendário, Cultos) -->
-        <TableRow
-            android:layout_marginTop="8dp">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/ce"
-                android:text="Home"
-                android:textColor="@color/white"
-                android:background="@color/caj"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_height="wrap_content" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/parentese_abrindo"
-                android:text="Eventos"
-                android:textColor="@color/white"
-                android:background="@color/caj"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_height="wrap_content" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/parentese_fechando"
-                android:text="Calendário"
-                android:textColor="@color/white"
-                android:background="@color/caj"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:layout_height="wrap_content" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/dividir"
-                android:text="Cultos"
-                android:textColor="@color/white"
-                android:background="@color/caj"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
+            <ImageView
+                android:id="@+id/buttonHome"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center"/>
-        </TableRow>
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_menu"
+                android:contentDescription="Menu" />
 
-        <!-- Segunda linha de botões (Bíblia, Sobre, Como Chegar) -->
-        <TableRow
-            android:layout_marginTop="16dp">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sete"
-                android:text="Bíblia"
-                android:gravity="center"
-                android:padding="10dp"
-                android:textColor="@color/white"
-                android:background="@color/sss"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
+            <!-- Central Logo -->
+            <ImageView
+                android:layout_width="123dp"
+                android:layout_height="68dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/logo_ibec"
+                android:contentDescription="Logo" />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/oito"
-                android:text="Sobre"
-                android:textColor="@color/white"
-                android:background="@color/sss"
-                android:gravity="center"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
+            <!-- Notification Icon -->
+            <ImageView
+                android:id="@+id/buttonNotifications"
+                android:layout_width="41dp"
+                android:layout_height="39dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:src="@drawable/ic_notificacao"
+                android:contentDescription="Notificações" />
+        </RelativeLayout>
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/nove"
-                android:text="Como Chegar"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:background="@color/sss"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
-        </TableRow>
+    </androidx.appcompat.widget.Toolbar>
 
-        <TableRow
-            android:layout_marginTop="16dp">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/opcao"
-                android:text="Opções"
-                android:gravity="center"
-                android:padding="10dp"
-                android:textColor="@color/white"
-                android:background="@color/sss"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/sobreCulto"
-                android:text="Sobre o Culto"
-                android:textColor="@color/white"
-                android:background="@color/sss"
-                android:gravity="center"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/kids"
-                android:text="Kids"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:background="@color/sss"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
-        </TableRow>
-
-        <TableRow
-            android:layout_marginTop="16dp">
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/lorem"
-                android:text="Lorem ipsum"
-                android:gravity="center"
-                android:padding="10dp"
-                android:textColor="@color/white"
-                android:background="@color/sss"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/abc"
-                android:text="Lorem"
-                android:textColor="@color/white"
-                android:background="@color/sss"
-                android:gravity="center"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
-
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/cba"
-                android:text="CBA"
-                android:gravity="center"
-                android:textColor="@color/white"
-                android:background="@color/sss"
-                android:layout_margin="2dp"
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="match_parent" />
-        </TableRow>
-
-    </TableLayout>
-
-    <TextView
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_margin="20dp"
-        android:background="@drawable/bg_edittext"
-        android:text="Digite aqui seu texto"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        />
+        android:layout_height="200dp"
+        android:layout_below="@id/toolbar"
+        android:layout_marginTop="8dp" />
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/banner_dots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/viewPager"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:background="@color/black" />
+
+        <ImageView
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="4dp"
+            android:src="@color/black" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/button_grid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Digite aqui seu texto: saksdnaijsndinlskdjfOSIDKFJOSJFDOMFLSOKJDFJOISJDGINHUIDGNSKJDNFSKJDNFISJdnfjsndfinsdfiusndfinsodkgnmodkfngoinsfinjuvS:Lkvc meiosv goihrnbgvucdnbo,dnvf,cnjugbdhcnvc,io nssoigc;znjb"
-        android:gravity="center"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        />
+        android:layout_below="@id/banner_dots"
+        android:layout_marginTop="16dp"
+        android:columnCount="3"
+        android:alignmentMode="alignMargins"
+        android:padding="16dp"
+        android:columnOrderPreserved="false">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#AFAFAF"
-        >
+        <Button
+            android:id="@+id/buttonBili"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Bíblia"
+            android:background="@color/sss"
+            android:textColor="@android:color/white"
+            android:layout_margin="4dp" />
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="45dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="7dp"
-            android:layout_marginBottom="17dp"
-            android:accessibilityPaneTitle="Calender"
-            android:src="@drawable/ic_calen" />
+        <Button
+            android:id="@+id/buttonPalavra"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Palavra"
+            android:background="@color/sss"
+            android:textColor="@android:color/white"
+            android:layout_margin="4dp" />
 
-        <ImageView
-            android:layout_width="39dp"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="82dp"
-            android:layout_marginBottom="23dp"
-            android:src="@drawable/ic_cake_24" />
+        <Button
+            android:id="@+id/buttonAnotacoes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Anotações"
+            android:background="@color/sss"
+            android:textColor="@android:color/white"
+            android:layout_margin="4dp" />
 
-        <ImageView
-            android:layout_width="39dp"
-            android:layout_height="40dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="169dp"
-            android:layout_marginBottom="23dp"
-            android:src="@drawable/ic_home" />
+        <Button
+            android:id="@+id/buttonOracoes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Orações"
+            android:background="@color/caj"
+            android:textColor="@android:color/white"
+            android:layout_margin="4dp" />
 
-    </RelativeLayout>
+        <Button
+            android:id="@+id/buttonDoacoes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Doações"
+            android:background="@color/caj"
+            android:textColor="@android:color/white"
+            android:layout_margin="4dp" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/buttonInscricoes"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Inscrições"
+            android:background="@color/caj"
+            android:textColor="@android:color/white"
+            android:layout_margin="4dp" />
+
+        <Button
+            android:id="@+id/buttonAgenda"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Agenda"
+            android:background="@color/www"
+            android:textColor="@android:color/white"
+            android:layout_margin="4dp" />
+
+        <Button
+            android:id="@+id/buttonEnvolva_se"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Envolva-se"
+            android:background="@color/www"
+            android:textColor="@android:color/white"
+            android:layout_margin="4dp" />
+
+        <Button
+            android:id="@+id/buttonAoVivo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:text="Ao Vivo"
+            android:background="@color/www"
+            android:textColor="@android:color/white"
+            android:layout_margin="4dp" />
+
+    </GridLayout>
+
+</RelativeLayout>

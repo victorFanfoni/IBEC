@@ -2,7 +2,15 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
 
-    <solid android:color="@color/white"/>
+    <!-- Define a cor da borda e sua espessura -->
+    <stroke
+        android:width="2dp"
+        android:color="@color/black"/>
+
+    <!-- Cor do preenchimento definida como transparente -->
+    <solid android:color="@android:color/transparent"/>
+
+    <!-- Cantos arredondados -->
     <corners android:radius="30dp"/>
 
 </shape>

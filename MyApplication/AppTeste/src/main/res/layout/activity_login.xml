@@ -1,46 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/sss">
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="601dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-13dp"
+        android:layout_marginBottom="-98dp"
+        android:src="@drawable/icone_white"
+        />
 
-    <View
-        android:id="@+id/conteirerTop"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="281dp"
+        android:layout_height="164dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="0dp"
-        android:background="@drawable/backgroud_view_top" />
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/bg_toolbar" />
 
     <ImageView
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_alignStart="@+id/conteirerTop"
-        android:layout_alignTop="@+id/conteirerTop"
-        android:layout_alignEnd="@+id/conteirerTop"
-        android:layout_alignBottom="@+id/conteirerTop"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="229dp"
-        android:layout_marginBottom="39dp"
-        android:contentDescription="Logo"
-        android:src="@drawable/logo_ibec_vertical_preto" />
+        android:layout_width="245dp"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="-17dp"
+        android:src="@drawable/logo_ibec_vertical" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="123dp"
+        android:text="A IGREJA QUE SEMPRE ESTA COM VOCE"
+        android:textColor="@color/black" />
 
     <EditText
         android:id="@+id/edit_email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/conteirerTop"
+        android:layout_below="@+id/toolbar"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="61dp"
         android:layout_marginEnd="20dp"
         android:autofillHints="emailAddress"
         android:background="@drawable/background_edittext"
         android:backgroundTint="#FFFFFF"
         android:drawableEnd="@drawable/ic_email"
-        android:hint="e_mail"
+        android:hint="Digite seu E-mail"
         android:inputType="textEmailAddress"
         android:maxLines="1"
         android:padding="15dp"
@@ -58,60 +72,10 @@
         android:autofillHints="password"
         android:background="@drawable/background_edittext"
         android:backgroundTint="#FFFFFF"
-        android:hint="digite_sua_senha"
+        android:hint="Digite Sua Senha"
         android:inputType="textPassword"
         android:padding="15dp"
         android:textColor="@color/black" />
-
-    <TextView
-        android:id="@+id/button_criar_conta"
-        android:layout_width="188dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/button_entrar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="119dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginEnd="102dp"
-        android:gravity="center_horizontal"
-        android:text="Nao Tem Conta Criar"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
-        android:textStyle="bold"/>
-
-    <Button
-        android:id="@+id/button_entrar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/textView4"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="37dp"
-        android:layout_marginEnd="48dp"
-        android:background="@drawable/bg_btn"
-        android:text="entrar" />
-
-    <View
-        android:id="@+id/view"
-        android:layout_width="wrap_content"
-        android:layout_height="64dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:background="@drawable/backgroud_view_bottom" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="130dp"
-        android:layout_height="113dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="52dp"
-        android:layout_marginEnd="81dp"
-        android:text="IBEC A IGREJA QUE SEMPRE ESTA COM VOCE! "
-        android:textColor="#040303"
-        android:textSize="14sp"
-        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/textView4"
@@ -119,10 +83,8 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/edit_senha"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="263dp"
+        android:layout_marginStart="271dp"
+        android:layout_marginTop="10dp"
         android:shadowDx="-2"
         android:shadowDy="-2"
         android:shadowRadius="1"
@@ -130,5 +92,44 @@
         android:textColor="#FFFFFF"
         android:textSize="14sp"
         android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/button_entrar"
+        android:layout_width="302dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="59dp"
+        android:background="@drawable/bg_btn"
+        android:text="entrar" />
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/backgroud_view_bottom" />
+
+    <TextView
+        android:id="@+id/button_criar_conta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_entrar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-10dp"
+        android:layout_marginTop="222dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_horizontal"
+        android:text="Nao Tem Conta? Criar"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
 
 </RelativeLayout>

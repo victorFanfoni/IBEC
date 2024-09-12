@@ -2,102 +2,135 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/teal_200"
+    android:background="@color/sss"
     android:orientation="vertical">
 
-    <Toolbar
-        android:id="@+id/Toolbar2"
-        android:layout_width="match_parent"
-        android:layout_height="70dp"
-        android:background="@drawable/bg_toolbar"
-        android:title="voce_esta_a_um_passo_para_a_felicidade"
-        android:titleMarginStart="25dp"/>
-
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:layout_below="@+id/Toolbar2"
-        android:drawableEnd="@drawable/ic_email"
-        android:hint="e_mail"
-        android:inputType="textEmailAddress"
-        android:textColor="@color/black"
-        android:backgroundTint="#FFFFFF"
-        android:maxLines="1"
-        android:padding="15dp"
-        android:textSize="18sp"
-        android:background="@drawable/background_edittext"
-        android:autofillHints="emailAddress" />
-
-    <EditText
-        android:id="@+id/editTextSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_edittext"
-        android:layout_below="@id/editTextEmail"
-        android:hint="digite_sua_senha"
-        android:backgroundTint="#FFFFFF"
-        android:textColor="@color/black"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:maxLines="1"
-        android:padding="15dp"
-        android:textSize="18sp"
-        android:autofillHints="password"
-        android:inputType="textPassword" />
-
-    <EditText
-        android:id="@+id/editTextConfirmarSenha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@drawable/background_edittext"
-        android:layout_below="@id/editTextSenha"
-        android:hint="confirmar_senha"
-        android:backgroundTint="#FFFFFF"
-        android:textColor="@color/black"
-        android:layout_marginTop="30dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:maxLines="1"
-        android:padding="15dp"
-        android:textSize="18sp"
-        android:autofillHints="password"
-        android:inputType="textPassword"/>
-
-    <Button
-        android:id="@+id/buttonCriarConta"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/editTextConfirmarSenha"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="601dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/bg_btn"
-        android:layout_marginStart="37dp"
-        android:layout_marginTop="190dp"
-        android:layout_marginEnd="32dp"
-        android:text="criar_conta" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-13dp"
+        android:layout_marginBottom="-98dp"
+        android:src="@drawable/icone_black"
+        />
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="281dp"
+        android:layout_height="164dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/bg_toolbar" />
+
+    <ImageView
+        android:layout_width="245dp"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="-17dp"
+        android:src="@drawable/logo_ibec_vertical" />
 
     <TextView
-        android:id="@+id/VoltaLogin"
-        android:layout_width="161dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonCriarConta"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="123dp"
+        android:text="VENHA FAZER PARTE DA NOSSA IGREJA"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/edit_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="61dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="emailAddress"
+        android:background="@drawable/background_edittext"
+        android:backgroundTint="#FFFFFF"
+        android:drawableEnd="@drawable/ic_email"
+        android:hint="Digite seu E-mail"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:padding="15dp"
+        android:textColor="@color/black"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/edit_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_email"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="password"
+        android:background="@drawable/background_edittext"
+        android:backgroundTint="#FFFFFF"
+        android:hint="Digite Sua Senha"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/edit_confirm_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edit_senha"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="password"
+        android:background="@drawable/background_edittext"
+        android:backgroundTint="#FFFFFF"
+        android:hint="Digite Sua Senha"
+        android:inputType="textPassword"
+        android:padding="15dp"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/button_entrar"
+        android:layout_width="302dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/edit_confirm_senha"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="149dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="101dp"
-        android:shadowDx="-2"
-        android:shadowDy="-2"
-        android:shadowRadius="1"
-        android:text="voltar_para_login"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="59dp"
+        android:background="@drawable/bg_btn"
+        android:text="entrar" />
+
+    <Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/backgroud_view_bottom" />
+
+    <TextView
+        android:id="@+id/btn_voltar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button_entrar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="-8dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginEnd="8dp"
+        android:gravity="center_horizontal"
+        android:text="Voltar ao Login"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="bold" />
 
 </RelativeLayout>
