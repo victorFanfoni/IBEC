@@ -1,40 +1,77 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@color/white"
-    >
+    android:background="#024A6E">
 
     <ImageView
-        android:id="@+id/Logo"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:background="@drawable/logo_ibec_vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="601dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-13dp"
+        android:layout_marginBottom="-98dp"
+        android:src="@drawable/Icone_colorido"
         />
 
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="281dp"
+        android:layout_height="164dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="63dp"
+        android:layout_marginTop="1dp"
+        android:background="@drawable/bg_toolbar" />
+
+
+    <ImageView
+        android:layout_width="245dp"
+        android:layout_height="160dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="89dp"
+        android:layout_marginTop="-13dp"
+        android:src="@drawable/logo_ibec_menor" />
+
     <TextView
-        android:id="@+id/Oracao"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Oracao do dia: slkdnfskndonsdnskdnflksndfkjsndkfjnksdnjfksjdfksnjdfnjjs\ndknjs\kdfnjkç\jfdsnfkskdfnjksdjnfk\snjdfçkjnsdfkjnsd\kfjn\sdgnjbjn\svnskFJNKJFNKJNSFKAJSBKJANSFKn."
-        android:textColor="@color/black"
-        android:layout_marginTop="50dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="123dp"
+        android:text="A IGREJA QUE SEMPRE ESTA COM VOCE"
+        android:textColor="@color/black" />
+
+    <EditText
+        android:id="@+id/txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="30dp"
+        android:text="Venha fazer parte da nossa igreja"
         />
 
     <Button
-        android:id="@+id/btComecar"
+        android:id="@+id/button_entrar"
+        android:layout_width="302dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="412dp"
+        android:layout_marginEnd="67dp"
+        android:background="@drawable/bg_btn"
+        android:text="entrar" />
+
+    <Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Começar"
-        android:layout_marginTop="210dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
-        android:background="@drawable/bg_btn"
-        />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="@drawable/backgroud_view_bottom" />
 
-
-
-</LinearLayout>
+</RelativeLayout>
