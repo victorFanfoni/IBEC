@@ -57,6 +57,7 @@
         android:backgroundTint="#FFFFFF"
         android:drawableEnd="@drawable/ic_email"
         android:hint="Digite seu E-mail"
+        android:textColorHint="@color/white"
         android:inputType="textEmailAddress"
         android:maxLines="1"
         android:padding="15dp"
@@ -75,6 +76,7 @@
         android:background="@drawable/background_edittext"
         android:backgroundTint="#FFFFFF"
         android:hint="Digite Sua Senha"
+        android:textColorHint="@color/white"
         android:inputType="textPassword"
         android:padding="15dp"
         android:textColor="@color/black" />
@@ -91,6 +93,7 @@
         android:background="@drawable/background_edittext"
         android:backgroundTint="#FFFFFF"
         android:hint="Digite Sua Senha"
+        android:textColorHint="@color/white"
         android:inputType="textPassword"
         android:padding="15dp"
         android:textColor="@color/black" />
