@@ -34,6 +34,10 @@ class MainActivity : ComponentActivity() {
     }
 
     private fun reload() {
-        // Implementation for reloading the UI if the user is signed in
+        Handler(Looper.getMainLooper()).postDelayed({
+            val intent = Intent(this, Home::class.java)
+            startActivity(intent)
+            finish()
+        }, 1000)
     }
 }

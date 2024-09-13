@@ -1,224 +1,232 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="#E1E1E1">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:padding="8dp">
+        android:layout_height="match_parent">
 
-        <RelativeLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:padding="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/buttonHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_menu"
+                    android:contentDescription="Menu" />
+
+                <ImageView
+                    android:layout_width="123dp"
+                    android:layout_height="68dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/logo_ibec"
+                    android:contentDescription="Logo" />
+
+                <ImageView
+                    android:id="@+id/buttonNotifications"
+                    android:layout_width="52dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:contentDescription="Notificações"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_notificacao" />
+            </RelativeLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/sss" />
+
+        <!-- Restante do conteúdo -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/toolbar"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            />
+
+        <LinearLayout
+            android:id="@+id/banner_dots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/viewPager"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
 
             <ImageView
-                android:id="@+id/buttonHome"
-                android:layout_width="wrap_content"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_margin="4dp"
+                android:background="@color/black" />
+
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_margin="4dp"
+                android:src="@color/black" />
+
+        </LinearLayout>
+
+        <GridLayout
+            android:id="@+id/button_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/banner_dots"
+            android:layout_marginTop="16dp"
+            android:columnCount="3"
+            android:alignmentMode="alignMargins"
+            android:padding="16dp"
+            android:columnOrderPreserved="false">
+
+            <Button
+                android:id="@+id/buttonBili"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_centerVertical="true"
-                android:padding="8dp"
-                android:src="@drawable/ic_menu"
-                android:contentDescription="Menu" />
+                android:layout_columnWeight="1"
+                android:text="Bíblia"
+                android:background="@color/www"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
 
-            <ImageView
-                android:layout_width="123dp"
-                android:layout_height="68dp"
-                android:layout_centerInParent="true"
-                android:src="@drawable/logo_ibec"
-                android:contentDescription="Logo" />
-
-            <ImageView
-                android:id="@+id/buttonNotifications"
-                android:layout_width="52dp"
+            <Button
+                android:id="@+id/buttonPalavra"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
-                android:layout_centerVertical="true"
-                android:contentDescription="Notificações"
-                android:padding="8dp"
-                android:src="@drawable/ic_notificacao" />
-        </RelativeLayout>
+                android:layout_columnWeight="1"
+                android:text="Palavra"
+                android:background="@color/www"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
 
-    </androidx.appcompat.widget.Toolbar>
+            <Button
+                android:id="@+id/buttonAnotacoes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Anotações"
+                android:background="@color/www"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:layout_below="@id/toolbar"
-        android:background="@color/sss" />
+            <Button
+                android:id="@+id/buttonOracoes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Orações"
+                android:background="@color/caj"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
 
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_below="@id/toolbar"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        />
+            <Button
+                android:id="@+id/buttonDoacoes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Doações"
+                android:background="@color/caj"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
 
-    <LinearLayout
-        android:id="@+id/banner_dots"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/viewPager"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="8dp">
+            <Button
+                android:id="@+id/buttonInscricoes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Inscrições"
+                android:background="@color/caj"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
 
-        <ImageView
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_margin="4dp"
-            android:background="@color/black" />
+            <Button
+                android:id="@+id/buttonAgenda"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Agenda"
+                android:background="@color/sss"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
 
-        <ImageView
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_margin="4dp"
-            android:src="@color/black" />
+            <Button
+                android:id="@+id/buttonEnvolva_se"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Envolva-se"
+                android:background="@color/sss"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
 
-    </LinearLayout>
+            <Button
+                android:id="@+id/buttonAoVivo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:text="Ao Vivo"
+                android:background="@color/sss"
+                android:textColor="@android:color/white"
+                android:layout_margin="4dp" />
 
-    <GridLayout
-        android:id="@+id/button_grid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/banner_dots"
-        android:layout_marginTop="16dp"
-        android:columnCount="3"
-        android:alignmentMode="alignMargins"
-        android:padding="16dp"
-        android:columnOrderPreserved="false">
+        </GridLayout>
 
-        <Button
-            android:id="@+id/buttonBili"
-            android:layout_width="0dp"
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_below="@id/button_grid"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            />
+        <LinearLayout
+            android:id="@+id/banner_dots2"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Bíblia"
-            android:background="@color/sss"
-            android:textColor="@android:color/white"
-            android:layout_margin="4dp" />
+            android:layout_below="@id/viewPager2"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="8dp">
 
-        <Button
-            android:id="@+id/buttonPalavra"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Palavra"
-            android:background="@color/sss"
-            android:textColor="@android:color/white"
-            android:layout_margin="4dp" />
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_margin="4dp"
+                android:background="@color/black" />
 
-        <Button
-            android:id="@+id/buttonAnotacoes"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Anotações"
-            android:background="@color/sss"
-            android:textColor="@android:color/white"
-            android:layout_margin="4dp" />
+            <ImageView
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_margin="4dp"
+                android:src="@color/black" />
 
-        <Button
-            android:id="@+id/buttonOracoes"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Orações"
-            android:background="@color/caj"
-            android:textColor="@android:color/white"
-            android:layout_margin="4dp" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/buttonDoacoes"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Doações"
-            android:background="@color/caj"
-            android:textColor="@android:color/white"
-            android:layout_margin="4dp" />
+    </RelativeLayout>
 
-        <Button
-            android:id="@+id/buttonInscricoes"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Inscrições"
-            android:background="@color/caj"
-            android:textColor="@android:color/white"
-            android:layout_margin="4dp" />
-
-        <Button
-            android:id="@+id/buttonAgenda"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Agenda"
-            android:background="@color/www"
-            android:textColor="@android:color/white"
-            android:layout_margin="4dp" />
-
-        <Button
-            android:id="@+id/buttonEnvolva_se"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Envolva-se"
-            android:background="@color/www"
-            android:textColor="@android:color/white"
-            android:layout_margin="4dp" />
-
-        <Button
-            android:id="@+id/buttonAoVivo"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_columnWeight="1"
-            android:text="Ao Vivo"
-            android:background="@color/www"
-            android:textColor="@android:color/white"
-            android:layout_margin="4dp" />
-
-    </GridLayout>
-
-    <androidx.viewpager2.widget.ViewPager2
-        android:id="@+id/viewPager2"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_below="@id/button_grid"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        />
-    <LinearLayout
-        android:id="@+id/banner_dots2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/viewPager2"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="8dp">
-
-        <ImageView
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_margin="4dp"
-            android:background="@color/black" />
-
-        <ImageView
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:layout_margin="4dp"
-            android:src="@color/black" />
-
-    </LinearLayout>
-
-</RelativeLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
