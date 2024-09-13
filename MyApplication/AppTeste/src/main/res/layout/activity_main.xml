@@ -10,7 +10,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="-13dp"
         android:layout_marginBottom="-98dp"
-        android:src="@drawable/Icone_colorido"
+        android:src="@drawable/icone_black"
         />
 
     <Toolbar
@@ -53,17 +53,6 @@
         android:layout_margin="30dp"
         android:text="Venha fazer parte da nossa igreja"
         />
-
-    <Button
-        android:id="@+id/button_entrar"
-        android:layout_width="302dp"
-        android:layout_height="39dp"
-        android:layout_below="@+id/txt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="412dp"
-        android:layout_marginEnd="67dp"
-        android:background="@drawable/bg_btn"
-        android:text="entrar" />
 
     <Toolbar
         android:layout_width="match_parent"

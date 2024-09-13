@@ -1,5 +1,6 @@
 package br.com.myapplication.android
 
+import android.annotation.SuppressLint
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.os.Bundle
@@ -17,6 +18,7 @@ class CreateAcconte : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create_acconte)
@@ -24,11 +26,11 @@ class CreateAcconte : AppCompatActivity() {
         // Initialize Firebase Auth
         auth = Firebase.auth
 
-        val email = findViewById<EditText>(R.id.editTextEmail)
-        val senha = findViewById<EditText>(R.id.editTextSenha)
-        val confirmarSenha = findViewById<EditText>(R.id.editTextConfirmarSenha)
-        val buttonCriarConta = findViewById<Button>(R.id.buttonCriarConta)
-        val voltarLogin = findViewById<TextView>(R.id.VoltaLogin)
+        val email = findViewById<EditText>(R.id.edit_email)
+        val senha = findViewById<EditText>(R.id.edit_senha)
+        val confirmarSenha = findViewById<EditText>(R.id.edit_confirm_senha)
+        val buttonCriarConta = findViewById<Button>(R.id.button_criar_conta)
+        val voltarLogin = findViewById<TextView>(R.id.btn_voltar)
 
         buttonCriarConta.setOnClickListener {
             val emailText = email.text.toString()

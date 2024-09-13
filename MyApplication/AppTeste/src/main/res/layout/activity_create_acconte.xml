@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/sss"
+    android:background="#024A6E"
     android:orientation="vertical">
 
     <ImageView
@@ -96,19 +96,18 @@
         android:textColor="@color/black" />
 
     <Button
-        android:id="@+id/button_entrar"
+        android:id="@+id/button_criar_conta"
         android:layout_width="302dp"
         android:layout_height="39dp"
         android:layout_below="@+id/edit_confirm_senha"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="59dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
         android:background="@drawable/bg_btn"
-        android:text="entrar" />
+        android:text="Criar Conta"/>
 
     <Toolbar
+        android:id="@+id/toolbar3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -119,14 +118,13 @@
 
     <TextView
         android:id="@+id/btn_voltar"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button_entrar"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="-8dp"
-        android:layout_marginTop="65dp"
+        android:layout_alignTop="@+id/toolbar3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center_horizontal"
         android:text="Voltar ao Login"
         android:textColor="@color/black"

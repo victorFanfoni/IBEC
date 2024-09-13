@@ -2,6 +2,8 @@ package br.com.myapplication.android
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.widget.Button
 import androidx.activity.ComponentActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -14,21 +16,17 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Initialize Firebase Auth
         auth = FirebaseAuth.getInstance()
 
-        val buttonComecar = findViewById<Button>(R.id.btComecar)
-
-        buttonComecar.setOnClickListener {
+        Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, Login::class.java)
             startActivity(intent)
             finish()
-        }
+        }, 1000)
     }
 
     public override fun onStart() {
         super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
         val currentUser = auth.currentUser
         if (currentUser != null) {
             reload()

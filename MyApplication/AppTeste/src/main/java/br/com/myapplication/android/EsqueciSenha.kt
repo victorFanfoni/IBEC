@@ -10,13 +10,13 @@ import androidx.appcompat.app.AppCompatActivity
 
 class EsqueciSenha : AppCompatActivity() {
 
-    @SuppressLint("ShowToast")
+    @SuppressLint("ShowToast", "MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_reset_password)
 
-        val buttonEnviar = findViewById<Button>(R.id.buttonResetPassword)
-        val buttonVoltar = findViewById<TextView>(R.id.VoltaLogin)
+        val buttonEnviar = findViewById<Button>(R.id.button_enviar)
+        val buttonVoltar = findViewById<TextView>(R.id.btn_voltar)
 
         buttonEnviar.setOnClickListener {
 
