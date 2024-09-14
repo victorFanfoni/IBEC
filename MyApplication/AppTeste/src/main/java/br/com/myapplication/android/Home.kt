@@ -49,12 +49,8 @@ class Home : AppCompatActivity() {
         }
 
         buttonPalavra.setOnClickListener {
-            Toast.makeText(
-                this,
-                "Botao palavra clicado",
-                Toast.
-                LENGTH_SHORT
-            ).show()
+            
+
         }
 
         buttonAnotacoes.setOnClickListener {
