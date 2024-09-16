@@ -13,7 +13,7 @@ class Home : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        val buttonHome = findViewById<ImageView>(R.id.buttonHome)
+        val buttonMenu = findViewById<ImageView>(R.id.buttonMenu)
         val buttonNotifications = findViewById<ImageView>(R.id.buttonNotifications)
         val buttonBiblia = findViewById<Button>(R.id.buttonBili)
         val buttonPalavra = findViewById<Button>(R.id.buttonPalavra)
@@ -25,7 +25,7 @@ class Home : AppCompatActivity() {
         val buttonEnvolvaSe = findViewById<Button>(R.id.buttonEnvolva_se)
         val buttonAoVivo = findViewById<Button>(R.id.buttonAoVivo)
 
-        buttonHome.setOnClickListener {
+        buttonMenu.setOnClickListener {
             Toast.makeText(
                 this,
                 "Botao Home clicado",
@@ -49,7 +49,7 @@ class Home : AppCompatActivity() {
         }
 
         buttonPalavra.setOnClickListener {
-            
+            finish()
 
         }
 

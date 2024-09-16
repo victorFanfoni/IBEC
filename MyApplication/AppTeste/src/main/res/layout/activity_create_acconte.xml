@@ -1,137 +1,183 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#024A6E"
-    android:orientation="vertical">
+    android:fillViewport="true"
+    android:background="@drawable/img_2">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="601dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="-13dp"
-        android:layout_marginBottom="-98dp"
-        android:src="@drawable/icone_white"
-        />
-
-    <Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="281dp"
-        android:layout_height="164dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="1dp"
-        android:background="@drawable/bg_toolbar" />
-
-    <ImageView
-        android:layout_width="245dp"
-        android:layout_height="160dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="-17dp"
-        android:src="@drawable/logo_ibec_vertical" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="73dp"
-        android:layout_marginTop="123dp"
-        android:text="VENHA FAZER PARTE DA NOSSA IGREJA"
-        android:textColor="@color/black" />
-
-    <EditText
-        android:id="@+id/edit_email"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="61dp"
-        android:layout_marginEnd="20dp"
-        android:autofillHints="emailAddress"
-        android:background="@drawable/background_edittext"
-        android:backgroundTint="#FFFFFF"
-        android:drawableEnd="@drawable/ic_email"
-        android:hint="Digite seu E-mail"
-        android:textColorHint="@color/white"
-        android:inputType="textEmailAddress"
-        android:maxLines="1"
-        android:padding="15dp"
-        android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:padding="20dp">
 
-    <EditText
-        android:id="@+id/edit_senha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edit_email"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:autofillHints="password"
-        android:background="@drawable/background_edittext"
-        android:backgroundTint="#FFFFFF"
-        android:hint="Digite Sua Senha"
-        android:textColorHint="@color/white"
-        android:inputType="textPassword"
-        android:padding="15dp"
-        android:textColor="@color/black" />
+        <!-- Logo -->
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="140dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/img_3" />
 
-    <EditText
-        android:id="@+id/edit_confirm_senha"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/edit_senha"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
-        android:autofillHints="password"
-        android:background="@drawable/background_edittext"
-        android:backgroundTint="#FFFFFF"
-        android:hint="Digite Sua Senha"
-        android:textColorHint="@color/white"
-        android:inputType="textPassword"
-        android:padding="15dp"
-        android:textColor="@color/black" />
+        <!-- Texto Superior -->
+        <TextView
+            android:id="@+id/texto_superior"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="A Igreja que está sempre com você"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="italic"
+            android:gravity="center" />
 
-    <Button
-        android:id="@+id/button_criar_conta"
-        android:layout_width="302dp"
-        android:layout_height="39dp"
-        android:layout_below="@+id/edit_confirm_senha"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:background="@drawable/bg_btn"
-        android:text="Criar Conta"/>
+        <!-- Título Cadastro -->
+        <TextView
+            android:id="@+id/titulo_cadastro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/texto_superior"
+            android:layout_marginTop="60dp"
+            android:layout_centerHorizontal="true"
+            android:text="Faça seu cadastro"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
 
-    <Toolbar
-        android:id="@+id/toolbar3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/backgroud_view_bottom" />
+        <!-- Campos de Cadastro -->
 
-    <TextView
-        android:id="@+id/btn_voltar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/toolbar3"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="16dp"
-        android:gravity="center_horizontal"
-        android:text="Voltar ao Login"
-        android:textColor="@color/black"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        <EditText
+            android:id="@+id/edit_nome"
+            android:layout_width="383dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titulo_cadastro"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="31dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/background_edittext"
+            android:hint="Nome completo"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
 
-</RelativeLayout>
+        <EditText
+            android:id="@+id/edit_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_nome"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edittext"
+            android:drawableStart="@drawable/ic_email"
+            android:hint="E-mail"
+            android:inputType="textEmailAddress"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_data_nascimento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_email"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edittext"
+            android:drawableStart="@drawable/ic_calen"
+            android:hint="Data de nascimento"
+            android:inputType="date"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_celular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_data_nascimento"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edittext"
+            android:hint="Celular (DDD)"
+            android:inputType="phone"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_igreja"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_celular"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edittext"
+            android:hint="Igreja que frequenta"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_igreja"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edittext"
+            android:drawableStart="@drawable/lock"
+            android:hint="Senha"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/edit_confirm_senha"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_senha"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edittext"
+            android:drawableStart="@drawable/lock"
+            android:hint="Confirme sua senha"
+            android:inputType="textPassword"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+        <Spinner
+            android:id="@+id/spinner_genero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/edit_confirm_senha"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/background_edittext"
+            android:padding="15dp" />
+
+        <!-- Botão Criar Conta -->
+        <Button
+            android:id="@+id/button_criar_conta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/spinner_genero"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/bg_btn"
+            android:text="Criar Conta"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:padding="15dp" />
+
+        <!-- Texto para voltar ao login -->
+        <TextView
+            android:id="@+id/btn_voltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/button_criar_conta"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:text="Voltar ao Login"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+</ScrollView>

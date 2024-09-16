@@ -21,9 +21,11 @@
         <activity
             android:name=".Login"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity
-            android:name=".CreateAcconte"
+
+        <activity android:name=".CreateAccount"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+
+
         <activity
             android:name=".EsqueciSenha"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />

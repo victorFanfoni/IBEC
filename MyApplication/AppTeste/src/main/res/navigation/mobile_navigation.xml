@@ -6,20 +6,66 @@
     app:startDestination="@+id/nav_home">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="br.com.myapplication.android.ui.home.HomeFragment"
-        android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        android:id="@+id/main"
+        android:label="main"
+        tools:layout="@layout/activity_main" >
+        <action
+            android:id="@+id/action_main_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_main_to_home"
+            app:destination="@id/home" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="br.com.myapplication.android.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/login"
+        android:label="Login"
+        tools:layout="@layout/activity_login" >
+        <action
+            android:id="@+id/action_login_to_criacaoConta"
+            app:destination="@id/criacaoConta" />
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/home" />
+        <action
+            android:id="@+id/action_login_to_resetPassword"
+            app:destination="@id/resetPassword" />
+    </fragment>
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="br.com.myapplication.android.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        android:id="@+id/criacaoConta"
+        android:label="criacaoConta"
+        tools:layout="@layout/activity_create_acconte" >
+        <action
+            android:id="@+id/action_criacaoConta_to_login"
+            app:destination="@id/login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/resetPassword"
+        android:label="resetPassword"
+        tools:layout="@layout/activity_reset_password" >
+        <action
+            android:id="@+id/action_resetPassword_to_login"
+            app:destination="@id/login" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/home"
+        android:label="home"
+        tools:layout="@layout/activity_home" >
+        <action
+            android:id="@+id/action_home_to_biblia"
+            app:destination="@id/biblia" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/biblia"
+        android:label="biblia"
+        tools:layout="@layout/activity_biblia" >
+        <action
+            android:id="@+id/action_biblia_to_home"
+            app:destination="@id/home" />
+    </fragment>
+
 </navigation>

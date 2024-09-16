@@ -1,7 +1,20 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#024A6E">
+    android:background="@drawable/img_2">
+
+    <ImageView
+        android:layout_width="443dp"
+        android:layout_height="911dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-32dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="-180dp"
+        android:src="@drawable/img_1" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -13,85 +26,96 @@
         android:src="@drawable/icone_white"
         />
 
-    <Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="281dp"
-        android:layout_height="164dp"
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="327dp"
+        android:layout_height="176dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="63dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginEnd="67dp"
-        android:background="@drawable/bg_toolbar" />
+        android:layout_marginStart="39dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="45dp"
+        android:src="@drawable/img_3" />
 
-    <ImageView
-        android:layout_width="245dp"
-        android:layout_height="160dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="72dp"
-        android:layout_marginTop="-17dp"
-        android:src="@drawable/logo_ibec_vertical" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/toolbar"
-        android:layout_alignEnd="@+id/toolbar"
-        android:layout_alignBottom="@+id/toolbar"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="123dp"
-        android:layout_marginEnd="11dp"
-        android:layout_marginBottom="23dp"
-        android:text="A Igraja Que Sempre Esta Com Voce"
-        android:textColor="@color/black" />
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="181dp"
+        android:text="A Igreja Que Sempre Esta Com Voce"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/txt_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="226dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="35dp" />
 
     <EditText
         android:id="@+id/edit_email"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/toolbar"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="61dp"
-        android:layout_marginEnd="20dp"
+        android:layout_below="@+id/txt_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
         android:autofillHints="emailAddress"
         android:background="@drawable/background_edittext"
-        android:backgroundTint="#FFFFFF"
-        android:drawableEnd="@drawable/ic_email"
-        android:hint="Digite seu E-mail"
-        android:textColorHint="@color/white"
+        android:drawableStart="@drawable/ic_email"
+        android:hint="  Digite seu e-mail"
         android:inputType="textEmailAddress"
         android:maxLines="1"
         android:padding="15dp"
-        android:textColor="@color/black"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/edit_senha"
-        android:layout_width="match_parent"
+        android:layout_width="290dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/edit_email"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
         android:autofillHints="password"
         android:background="@drawable/background_edittext"
-        android:backgroundTint="#FFFFFF"
+        android:drawableStart="@drawable/lock"
         android:hint="Digite Sua Senha"
-        android:textColorHint="@color/white"
         android:inputType="textPassword"
         android:padding="15dp"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textColorHint="@color/white" />
+
+    <ImageView
+        android:id="@+id/eye_icon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignTop="@id/edit_senha"
+        android:layout_alignEnd="@id/edit_senha"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="21dp"
+        android:contentDescription="Toggle Password Visibility"
+        android:src="@drawable/ic_eye_open" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="113dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/edit_senha"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="20dp"
         android:text="Redefinir Senha"
         android:textColor="@color/white"
         android:textSize="14sp"
@@ -99,38 +123,41 @@
 
     <Button
         android:id="@+id/button_entrar"
-        android:layout_width="302dp"
-        android:layout_height="39dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/textView4"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        android:layout_marginEnd="59dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/bg_btn"
         android:text="entrar" />
 
     <Toolbar
-        android:id="@+id/toolbar2"
-        android:layout_width="match_parent"
+        android:id="@+id/toolbar5"
+        android:layout_width="362dp"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/backgroud_view_bottom" />
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="616dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/img" />
 
     <TextView
         android:id="@+id/button_criar_conta"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/toolbar2"
+        android:layout_height="20dp"
+        android:layout_alignStart="@+id/toolbar5"
+        android:layout_alignTop="@+id/toolbar5"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="19dp"
-        android:layout_marginBottom="13dp"
-        android:text="Nao Tem Conta? Criar"
-        android:textColor="@color/black"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginBottom="44dp"
+        android:text="Ainda não tem cadastro? Cadastre-se"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold" />
 
